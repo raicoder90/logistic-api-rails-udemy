@@ -18,7 +18,7 @@ class Api::V1::OperationsController < ApplicationController
     @operation = Operation.new(operation_params)
 
     if @operation.save
-      render json: @operation, status: :created, location: @operation
+      render json: @operation, status: :created, location: api_v1_operations_url(@operation)
     else
       render json: @operation.errors, status: :unprocessable_entity
     end

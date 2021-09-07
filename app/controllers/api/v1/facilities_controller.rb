@@ -18,7 +18,7 @@ class Api::V1::FacilitiesController < ApplicationController
     @facility = Facility.new(facility_params)
 
     if @facility.save
-      render json: @facility, status: :created, location: @facility
+      render json: @facility, status: :created, location: api_v1_facility_url(@facility)
     else
       render json: @facility.errors, status: :unprocessable_entity
     end
