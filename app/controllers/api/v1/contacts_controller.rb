@@ -5,12 +5,14 @@ class Api::V1::ContactsController < ApplicationController
   def index
     @contacts = Contact.all
 
-    render json: @contacts
+    render json: @contacts,include: [
+      {customer: {except: [:created_at, :updated_at]}}]
   end
 
   # GET /contacts/1
   def show
-    render json: @contact
+    render json: @contact,include: [
+      {customer: {except: [:created_at, :updated_at]}}]
   end
 
   # POST /contacts
