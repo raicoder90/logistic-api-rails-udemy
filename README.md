@@ -1,25 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Projeto em RoR 6 para gerenciar empresa de logistica dos mais diferentes modais.
 
-Things you may want to cover:
+O que foi utilizado:
 
-* Ruby version
+* Ruby 2.6
 
-* System dependencies
+* Rail 6+
 
-* Configuration
+* PostgreSql
 
-* Database creation
+Para rodar o projeto basta clonar e rodar:
 
-* Database initialization
+* bundle
+* rails db:create db:migrate
+* rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# logistic-api-rails
+Acessar a porta:
+* http://localhost:3000/
